@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conference Bingo!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="moroni">📯</div>
+      <div class="header-text">
+        <h1>Conference Bingo!</h1>
+        <p class="subtitle">Listen &amp; mark what you hear!</p>
+      </div>
+      <div class="moroni">📯</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="card-wrapper">
+      <div class="bingo-header">
+        <span>B</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+        <span>O</span>
+      </div>
+      <div class="bingo-grid" id="bingoGrid"></div>
+    </div>
+
+    <div class="controls">
+      <button class="btn-new" id="newCardBtn">🔀 New Card</button>
+      <button class="btn-clear" id="clearBtn">🧹 Clear Marks</button>
+    </div>
+
+    <div class="how-to-play">
+      <h2>How to Play</h2>
+      <ol>
+        <li>Listen carefully to General Conference!</li>
+        <li>When a speaker talks about a topic, tap that square.</li>
+        <li>Get 5 in a row — across, down, or diagonal — to win!</li>
+      </ol>
+    </div>
+  </main>
+
+  <!-- Win Modal -->
+  <div class="modal-overlay" id="winModal" hidden>
+    <div class="modal">
+      <div class="win-emoji">🎉</div>
+      <h2>BINGO!</h2>
+      <p>Great listening! You got 5 in a row!</p>
+      <div class="modal-buttons">
+        <button class="btn-new" id="modalNewCard">🔀 New Card</button>
+        <button class="btn-clear" id="modalKeepPlaying">Keep Playing</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <script src="app.js"></script>
+</body>
+</html>
